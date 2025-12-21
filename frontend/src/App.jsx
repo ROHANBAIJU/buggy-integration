@@ -2,8 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-const image = import.meta.env.VITE_IMAGE_BASE64;
-const inputs = {image}; // Set your inputs here
+const inputs = {}; // Set your inputs here
 var hyperKycConfig;
 
 function App() {
