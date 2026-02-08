@@ -4,11 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <title>HyperVerge KYC Integration</title>
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- React application entry point -->
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://hv-web-sdk-cdn.hyperverge.co/hyperverge-web-sdk@<9.18.0>/src/sdk.min.js"></script>
+    
+    <!-- 
+      HyperVerge Web SDK v10.0.0
+      
+      BUG FIX: Changed from @<9.18.0> to @10.0.0
+      - The angle brackets <> in the version caused a 403 Forbidden error
+      - Version must be a valid number without angle brackets
+      
+      Note: For v10.0.0+, ensure CSP whitelisting includes:
+      - *.edge.hyperverge.co (for UI assets)
+      
+      SDK provides:
+      - window.HyperKycConfig: Configuration class
+      - window.HyperKYCModule.launch(): Method to start verification flow
+    -->
+    <script src="https://hv-web-sdk-cdn.hyperverge.co/hyperverge-web-sdk@10.0.0/src/sdk.min.js"></script>
   </body>
 </html>
